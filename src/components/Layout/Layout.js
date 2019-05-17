@@ -1,7 +1,7 @@
 import * as React from 'react';
 import propTypes from 'prop-types';
-import AppBar from '../common/ApplicationBar';
-import Drawer from '../common/Drawer';
+import AppBar from '../molecules/ApplicationBar';
+import Drawer from '../molecules/Drawer';
 
 const Layout = props => {
   const { loggedIn, isDrawerOpen, drawerVariant } = props;

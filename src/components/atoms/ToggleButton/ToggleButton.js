@@ -77,6 +77,7 @@ const ToggleButton = props => {
 ToggleButton.propTypes = {
   classes: PropTypes.object.isRequired,
   selected: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default withStyles(styles)(ToggleButton);

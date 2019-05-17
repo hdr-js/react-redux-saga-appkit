@@ -5,7 +5,7 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import store from './store';
 import Layout from './components/Layout';
 
-import * as RouteComponents from './components';
+import * as RouteComponents from './components/routes';
 import routesConfig from './routesConfig';
 import RouteFactory from './components/RouteFactory';
 import './App.scss';

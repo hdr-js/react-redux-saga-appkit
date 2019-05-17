@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import { withStyles } from '@material-ui/core';
 
-import NotFound from '../Home';
+import NotFound from '../routes/NotFound';
 
 const classStyles = {
   fullSpan: {

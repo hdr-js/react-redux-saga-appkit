@@ -44,7 +44,7 @@ const UploadButton = props => {
         type="file"
         onChange={onChange}
       />
-      <Button variant="contained" component="span" className={classes.button}>
+      <Button onClick={handleFile} variant="contained" component="span" className={classes.button}>
         Upload
       </Button>
     </label>

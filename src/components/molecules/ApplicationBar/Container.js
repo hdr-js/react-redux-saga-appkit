@@ -5,10 +5,14 @@ import AppBar from './AppBar';
 
 const mapStateToProps = () => ({});
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  logout: loginActions.logout,
-},
-dispatch);
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    {
+      logout: loginActions.logout,
+    },
+    dispatch,
+  );
+};
 
 export default connect(
   mapStateToProps,

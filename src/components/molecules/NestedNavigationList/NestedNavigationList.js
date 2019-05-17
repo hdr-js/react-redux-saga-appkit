@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -116,8 +117,9 @@ class NestedList extends React.Component {
     const { open } = this.state;
     return (
       <List component="nav" className={classes.root}>
-        {listData && listData.length > 0 &&
-          listData.map(item => (
+        {listData
+          && listData.length > 0
+          && listData.map(item => (
             <div key={item.value}>
               <ListItem
                 className={this.getExpandedStyles(item.value)}

@@ -4,15 +4,8 @@ import { withRouter } from 'react-router-dom';
 import withStyles from '@material-ui/core/styles/withStyles';
 import NavBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { AccountCircle, ExpandMore, ExpandLess, OfflineBolt, Mail } from '@material-ui/icons';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import IconButton from '@material-ui/core/IconButton';
+import { AccountCircle, OfflineBolt, Mail } from '@material-ui/icons';
 import './AppBar.scss';
-import logoAsset from '../../../assets/logo.png';
 
 const classStyles = () => ({
   icon: {
@@ -58,18 +51,6 @@ const classStyles = () => ({
 });
 
 class AppBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userOpen: false,
-    };
-  }
-
-  handleOnLogoClick = () => {
-    // console.log('clicked')
-    // this.props.history.push('/landing');
-  };
-
   handleExpand = () => {
     this.setState(prevState => ({ userOpen: !prevState.userOpen }));
   };
@@ -82,15 +63,11 @@ class AppBar extends Component {
 
   render() {
     const { classes } = this.props;
-    const { userOpen } = this.state;
     return (
       <Fragment>
         <NavBar id="MainNavigation" position="static" className={classes.appBar}>
           <Toolbar disableGutters>
             <div className={classes.mainDiv}>
-              <div className="leftDiv">
-                <img className="logoImage" src={logoAsset} alt="" onClick={this.handleOnLogoClick} />
-              </div>
               <div className="centerDiv">
                 <div className="innerCenterDiv">
                   <Mail
@@ -109,43 +86,6 @@ class AppBar extends Component {
                     }}
                   />
                 </div>
-              </div>
-              <div className="rightDiv" onClick={this.handleExpand}>
-                <span className={classes.nameSpan}>John Smith Doh Cement GarA</span>
-                <IconButton
-                  disableRipple
-                  className={classes.iconButton}
-                  buttonRef={node => {
-                    this.anchorEl = node;
-                  }}
-                >
-                  <div className={classes.iconDiv}>
-                    {userOpen ? (
-                      <ExpandLess
-                        classes={{
-                          root: classes.expandIcon,
-                        }}
-                      />
-                    ) : (
-                        <ExpandMore
-                          classes={{
-                            root: classes.expandIcon,
-                          }}
-                        />
-                      )}
-                  </div>
-                </IconButton>
-                <Popper open={userOpen} anchorEl={this.anchorEl} transition disablePortal>
-                  {({ TransitionProps }) => (
-                    <Grow {...TransitionProps} id="menu-list-grow">
-                      <Paper>
-                        <MenuList>
-                          <MenuItem onClick={this.handleLogout}>Logout</MenuItem>
-                        </MenuList>
-                      </Paper>
-                    </Grow>
-                  )}
-                </Popper>
               </div>
             </div>
           </Toolbar>

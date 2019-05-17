@@ -1,17 +1,17 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Login from './Login';
-import { selectors as loginSelectors, actions as loginActions } from '../../ducks/login';
+import Drawer from './Drawer';
+
+import { selectors as uiSelectors, actions as uiActions } from '../../../ducks/ui';
 
 const mapStateToProps = state => ({
-  loggedIn: loginSelectors.loggedIn(state),
-  isLoading: loginSelectors.loading(state),
+  isDrawerOpen: uiSelectors.isDrawerOpen(state),
 });
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     {
-      login: loginActions.login,
+      drawerOpen: uiActions.drawerOpen,
     },
     dispatch,
   );
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Login);
+)(Drawer);

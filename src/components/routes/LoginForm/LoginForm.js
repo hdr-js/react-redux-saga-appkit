@@ -8,7 +8,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Typography from '@material-ui/core/Typography';
 import propTypes from 'prop-types';
 import './LoginForm.scss';
-import TextField from '../common/TextField';
+import TextField from '../../atoms/TextField';
 
 class LoginForm extends Component {
   constructor(props) {

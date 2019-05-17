@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "description": "It's mfluencer",
   "main": "src/index.js",
-  "author": "Haider",
+  "author": "Haider Ali Anjum",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/headerali/react-redux-saga-appkit.git"
+  },
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --mode development --config config/webpack.base.config.js --open --hot --history-api-fallback --env.PLATFORM=local --env.VERSION=stag",
@@ -14,9 +18,18 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "prettier": "prettier --write src/**/*.js",
-    "is": "yarn install && yarn start",
-    "cis": "rmdir /s/q node_modules && yarn install && yarn start"
+    "prettier": "prettier --write src/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "npm run lint:write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@material-ui/core": "^3.0.0",
@@ -36,9 +49,7 @@
     "react-transition-group": "^2.4.0",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.8",
-    "redux-saga": "^1.0.2",
-    "redux-thunk": "^2.3.0",
-    "styled-components": "^3.3.3"
+    "redux-saga": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

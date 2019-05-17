@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 
-const apiEndpoint = API_URL;
+const apiEndpoint = '127.0.0.1';
 
 const HTTP_OK = 200;
 const HTTP_NO_CONTENT = 204;

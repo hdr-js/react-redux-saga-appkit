@@ -47,7 +47,6 @@ export default (state = initialState, action) => {
     case types.logout:
       sessionStorage.removeItem('token');
       sessionStorage.removeItem('token_type');
-
       return {
         ...state,
         data: {

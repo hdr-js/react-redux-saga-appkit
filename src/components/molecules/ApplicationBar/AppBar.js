@@ -4,15 +4,16 @@ import { withRouter } from 'react-router-dom';
 import withStyles from '@material-ui/core/styles/withStyles';
 import NavBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import { AccountCircle, OfflineBolt, Mail } from '@material-ui/icons';
+import IconButton from '@material-ui/core/IconButton';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { AccountCircle } from '@material-ui/icons';
 import './AppBar.scss';
 import logoAsset from '../../../assets/todolistlogo-1.png';
 
 const classStyles = () => ({
   icon: {
     fontSize: 25,
-    marginTop: '8px',
-    marginBottom: '8px',
     fill: '#222222',
   },
   expandIcon: {
@@ -52,18 +53,23 @@ const classStyles = () => ({
 });
 
 class AppBar extends Component {
-  handleExpand = () => {
-    this.setState(prevState => ({ userOpen: !prevState.userOpen }));
+  state = {
+    menuAnchorEl: null,
   };
 
   handleLogout = () => {
     const { logout, history } = this.props;
     logout();
-    history.push('/login');
+    history.push('/');
+  };
+
+  handleClickProfile = event => {
+    this.setState({ menuAnchorEl: event.currentTarget });
   };
 
   render() {
     const { classes } = this.props;
+    const { menuAnchorEl } = this.state;
     return (
       <Fragment>
         <NavBar id="MainNavigation" position="static" className={classes.appBar}>
@@ -79,21 +85,23 @@ class AppBar extends Component {
               </div>
               <div className="centerDiv">
                 <div className="innerCenterDiv">
-                  <Mail
-                    classes={{
-                      root: classes.icon,
-                    }}
-                  />
-                  <OfflineBolt
-                    classes={{
-                      root: classes.icon,
-                    }}
-                  />
-                  <AccountCircle
-                    classes={{
-                      root: classes.icon,
-                    }}
-                  />
+                  <IconButton onClick={this.handleClickProfile}>
+                    <AccountCircle
+                      classes={{
+                        root: classes.icon,
+                      }}
+                    />
+                  </IconButton>
+                  <Menu
+                    id="long-menu"
+                    anchorEl={menuAnchorEl}
+                    open={Boolean(menuAnchorEl)}
+                    onClose={this.handleClickProfile}
+                  >
+                    <MenuItem key="logout" onClick={this.handleLogout}>
+                      Logout
+                    </MenuItem>
+                  </Menu>
                 </div>
               </div>
             </div>

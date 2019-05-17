@@ -6,13 +6,14 @@ import NavBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { AccountCircle, OfflineBolt, Mail } from '@material-ui/icons';
 import './AppBar.scss';
+import logoAsset from '../../../assets/todolistlogo-1.png';
 
 const classStyles = () => ({
   icon: {
     fontSize: 25,
     marginTop: '8px',
     marginBottom: '8px',
-    fill: 'rgb(66, 170, 243)',
+    fill: '#222222',
   },
   expandIcon: {
     fontSize: 25,
@@ -68,6 +69,14 @@ class AppBar extends Component {
         <NavBar id="MainNavigation" position="static" className={classes.appBar}>
           <Toolbar disableGutters>
             <div className={classes.mainDiv}>
+              <div className="leftDiv">
+                <img
+                  className="logoImage"
+                  src={logoAsset}
+                  alt=""
+                  onClick={this.handleOnLogoClick}
+                />
+              </div>
               <div className="centerDiv">
                 <div className="innerCenterDiv">
                   <Mail

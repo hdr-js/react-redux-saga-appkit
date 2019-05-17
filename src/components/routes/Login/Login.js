@@ -17,7 +17,7 @@ class Login extends React.Component {
       return (
         <Redirect
           to={{
-            pathname: '/brand-profile',
+            pathname: '/',
             state: { from: location },
           }}
         />

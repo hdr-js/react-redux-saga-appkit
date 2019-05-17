@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import propTypes from 'prop-types';
 import './LoginForm.scss';
 import TextField from '../../atoms/TextField';
+import loginBanner from '../../../assets/login-banner.jpg';
+import loginLogo from '../../../assets/todolistlogo-1.png';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -63,12 +65,12 @@ class LoginForm extends Component {
       <div className="wrapper">
         <Paper className="loginRouteContainer">
           <div className="loginBannerContainer">
-            <img className="loginBannerImage" src="http://lorempixel.com/500/600/food/" alt="" />
+            <img className="loginBannerImage" src={loginBanner} alt="" />
           </div>
           <div className="login-form-outer">
             <div className="login-form-inner">
               <div className="logoContainer">
-                <img src="http://lorempixel.com/150/50/food/" alt="" />
+                <img src={loginLogo} alt="" />
               </div>
               <div className="loginFiledsContainer">
                 <form onSubmit={this.handleLoginSubmit}>

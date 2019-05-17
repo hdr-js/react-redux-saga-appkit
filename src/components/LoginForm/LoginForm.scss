@@ -1,0 +1,121 @@
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.loginRouteContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.loginBannerImage {
+    width: 100%;
+    min-height: 100%;
+}
+
+.loginBannerContainer {
+    height: 100%;
+    width: 40%; 
+    min-width: 650px; 
+}
+
+.login-button {
+    max-width: 210px !important;
+    min-width: 210px !important;
+    background-color: #42aaf3 !important;
+}
+
+.login-button:hover {
+    background-color: #0095ff !important;
+}
+
+.login-heading {
+    font-size: 18px;
+    font-weight: 300;
+    color: #777777;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.login-form-outer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 60%;
+}
+
+.login-form-inner{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 400px;
+}
+
+.logoContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.loginFiledsContainer {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.button-div {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.sign-up-div {
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.login-controls {
+    padding-left: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.forgot-div {
+    padding-top: 13px;
+}
+
+.blue {
+    color: #42aaf3 !important;
+    font-weight: bold !important;
+}
+
+.button-label {
+    color: white;
+    font-weight: bold;
+    div {
+        line-height: normal;
+        vertical-align: middle;
+        margin-left: 8px;
+    }
+}
+
+.buttonLabelProgress {
+    position: absolute;
+}
+
+.login-error {
+    color: #f44336;
+    margin: 0;
+    font-size: 0.75rem;
+    text-align: left;
+    margin-top: 16px;
+    min-height: 1em;
+    line-height: 1em;
+}

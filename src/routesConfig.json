@@ -1,0 +1,17 @@
+[
+  {
+    "path": "/",
+    "component": "Root",
+    "exact": true
+  },
+  {
+    "path": "/login",
+    "component": "Login",
+    "noNav": true
+  },
+  {
+    "path": "/home",
+    "component": "Home",
+    "noNav": true
+  }
+]

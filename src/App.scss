@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  // background-image: url('assets/bg-loginpage.png');
+  background-position: top left;
+  background-color: rgb(255, 255, 255);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: #253552;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  flex-flow: column;
+}

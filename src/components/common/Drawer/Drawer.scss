@@ -1,0 +1,21 @@
+.mainDiv {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 10px 0px;
+  font-family: Roboto, sans-serif;
+}
+
+.searchContainer {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.navigationListContainer {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}

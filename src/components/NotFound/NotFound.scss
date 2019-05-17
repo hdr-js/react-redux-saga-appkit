@@ -1,0 +1,42 @@
+.wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .outer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  .inner {
+    width: 500px;
+    height: 340px
+  }
+
+  .top{
+      background-color: #000000;
+      padding : 21px 40px;
+      height: 128px
+  }
+  .bottom{
+    padding : 15px 40px;
+  }
+  .left{
+      width: 150px;
+      float: left;
+  }
+  .right{
+      width: 56px;
+      float: right;
+  }
+  .homeButton
+  {
+    background-color: #FE6F01;
+    color: #ffffff;
+    position: relative;
+    bottom: 42px
+  }

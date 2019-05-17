@@ -1,0 +1,73 @@
+.logoImage {
+  height: 44px;
+  max-height: 64px;
+  margin-top: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  cursor: pointer;
+}
+
+.appBar > div {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.mainNavigationLogo,
+.mainNavigationFullLogo {
+  display: "flex";
+  flex-flow: "row nowrap";
+  flex: 1;
+}
+
+.leftDiv {
+  width: 304px;
+}
+
+.logoBlued {
+  background-color: #17203a;
+}
+
+.centerDiv {
+  width: 100%;
+  float: right;
+}
+
+.innerCenterDiv {
+  float: right;
+  display: flex;
+  width: 125px;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.rightDiv {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-right: 30px;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .user-account {
+    display: none;
+  }
+  .navigation-button {
+    width: 40px !important;
+    min-width: 40px !important;
+    padding: 12px 6px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mainNavigationLogo {
+    overflow: hidden;
+    width: 60px;
+    max-width: 60px;
+  }
+  .mainNavigationLogo img {
+    margin-left: 5px !important;
+    margin-right: 0px;
+  }
+}
